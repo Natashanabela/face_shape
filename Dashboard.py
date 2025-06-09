@@ -5,7 +5,7 @@ import tensorflow as tf
 from mtcnn import MTCNN
 
 # Load model yang akan digunakan untuk klasifikasi bentuk wajah
-interpreter = tf.lite.Interpreter(model_path="model 14 (79%).tflite")
+interpreter = tf.lite.Interpreter(model_path="model baru banget(79%).tflite")
 interpreter.allocate_tensors()
 
 # Mendapatkan informasi input dan output dari model
@@ -108,8 +108,8 @@ if st.session_state.camera_active and not st.session_state.captured:
 
     capturing = True
     while capturing:
-        ret, frame = cap.read()
-        if not ret:
+        read, frame = cap.read()
+        if not read:
             st.write("Error: Cannot read frame from the camera.")
             break
 
